@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  @apply bg-canvas text-ink font-body antialiased;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #C9CCE0;
+  border-radius: 999px;
+}
+
+.badge {
+  @apply inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-semibold;
+}
+
+.card {
+  @apply bg-surface border border-line rounded-xl2 shadow-card;
+}
+
+.input {
+  @apply w-full rounded-lg border border-line bg-white px-3 py-2 text-sm text-ink placeholder:text-muted
+         focus:outline-none focus:ring-2 focus:ring-accent/40 focus:border-accent transition;
+}
+
+.btn-primary {
+  @apply inline-flex items-center gap-2 rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-white
+         hover:bg-[#3F4CE0] active:scale-[0.98] transition shadow-sm;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center gap-2 rounded-lg border border-line bg-white px-4 py-2 text-sm font-semibold text-ink
+         hover:bg-canvas active:scale-[0.98] transition;
+}
+
+.btn-danger {
+  @apply inline-flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-semibold text-danger
+         hover:bg-danger/10 transition;
+}

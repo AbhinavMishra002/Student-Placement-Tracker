@@ -1,0 +1,4 @@
+node_modules/
+database/placement.db
+database/placement.db-*
+.env
